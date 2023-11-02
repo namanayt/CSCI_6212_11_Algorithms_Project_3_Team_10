@@ -1,6 +1,7 @@
 import sys
 import time
 
+# Algorithm to find the highest floor from which egg can be dropped without breaking
 def find_first_drop(egg, fl):
     dp = [[0] * (fl + 1) for _ in range(egg + 1)]
 
@@ -39,6 +40,6 @@ while counter > 0:
     counter -= 1
 
 avg = sum / temp_counter
-print("Critical floor with", m, "eggs and", n, "floors is", res)
+print("Initial floor from where egg can be dropped with", m, "eggs and", n, "floors is", res)
 # print("Minimum number of trials in worst case with", n, "eggs and", k, "floors is", minTrials(n, k))
 print("Time Taken: ", avg)
